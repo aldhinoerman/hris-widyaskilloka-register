@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../assets/img/logo-widya-skilloka.png';
 import Company from '../components/CompanyField';
 import { Card, CardGroup, Col, Container, Row, Form, InputGroup, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReCAPTCHA from "react-google-recaptcha";
 import './Register.css';
 
@@ -164,21 +165,24 @@ function Register() {
                                         </Col>
                                     </Row>
 
-                                    <ReCAPTCHA
-                                        className="text-center"
-                                        sitekey="6LdRldAaAAAAAKZRCsMMkCz5m40ybek3KY8Pak2t"
-                                    />
+                                    <Form.Group>
+                                        <ReCAPTCHA
+                                            className="text-center recaptcha"
+                                            sitekey="6LdEU9saAAAAAGFMHNfZ334qstmt1ZIFKBsEvVyT"
+                                        />
+                                    </Form.Group>
 
                                     <Button
-                                        type="button"
-                                        className="btn btn-secondary btn-lg btn-block btn-register"
+                                        type="submit"
+                                        className="register-submit mt-3 btn-secondary"
+                                        style={{ width: '100%', padding: '10px 0', color: '#fff', backgroundColor: '#335877' }}
                                     >
                                         Register
                                     </Button>
 
                                     <div className="mt-5">
                                         <a className="text-link" href="https://widyaskilloka.com/login">
-                                            <i className="mr-2 fa fa-chevron-left font-weigh-bold" aria-hidden="true"></i>
+                                            <FontAwesomeIcon icon="fa-chevron-left" />
                                             Ke Halaman Login
                                         </a>
                                     </div>
