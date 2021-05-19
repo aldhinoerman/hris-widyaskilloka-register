@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../assets/img/logo-widya-skilloka.png';
 import Company from '../components/CompanyField';
-import { Card, CardGroup, Col, Container, Row, Form } from 'react-bootstrap';
+import { Card, CardGroup, Col, Container, Row, Form, InputGroup, Button } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
 import './Register.css';
 
@@ -27,140 +27,154 @@ function Register() {
                                         <b>Data Perusahaan</b>
                                     </h5>
 
-                                    <div className='row'>
-                                        <div className="col-sm-6">
-                                            <div className='form-group'>
-                                                <label className="input-label" htmlFor="namaPerusahaan">
+                                    <Row>
+                                        <Col sm={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="namaPerusahaan">
                                                     Nama Perusahaan
-                                            </label>
-                                                <input
+                                                </Form.Label>
+                                                <Form.Control
                                                     label='Nama Perusahaan'
                                                     type='text'
-                                                    className='form-control'
                                                     id="namaPerusahaan"
                                                     name='namaPerusahaan'
                                                     required
-                                                ></input>
-                                            </div>
-                                        </div>
+                                                />
+                                            </Form.Group>
+                                        </Col>
 
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Website Perusahaan
-                                            </label>
-                                            <div className="input-group mb-3">
-                                                <input
+                                        <Col sm={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="websitePerusahaan">
+                                                    Website Perusahaan
+                                                </Form.Label>
+                                                <Form.Control
                                                     type="text"
-                                                    className="form-control"
-                                                    id="basic-url"
-                                                    aria-describedby="basic-addon3"
-                                                ></input>
-                                            </div>
-                                        </div>
+                                                    label="Website Perusahaan"
+                                                    id="websitePerusahaan"
+                                                    name="websitePerusahaan"
+                                                ></Form.Control>
+                                            </Form.Group>
+                                        </Col>
 
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Nomor Telepon Perusahaan
-                                            </label>
-                                            <div className="input-group mb-3">
-                                                <div className="input-group-prepend">
-                                                    <span className="input-group-text" id="basic-addon1">
-                                                        +
-                                                    </span>
-                                                </div>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    placeholder="62"
-                                                    aria-label="62"
-                                                    aria-describedby="basic-addon1"
-                                                ></input>
-                                            </div>
-                                        </div>
+                                        <Col sm={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="noPerusahaan">
+                                                    Nomor Telepon Perusahaan
+                                            </Form.Label>
+                                                <InputGroup>
+                                                    <InputGroup.Prepend>
+                                                        <InputGroup.Text id="noPerusahaan">
+                                                            +
+                                                        </InputGroup.Text>
+                                                    </InputGroup.Prepend>
+                                                    <Form.Control
+                                                        label="Nomor Telpon Perusahaan"
+                                                        type="tel"
+                                                        placeholder="62"
+                                                        id="noPerusahaan"
+                                                        name="noPerusahaan"
+                                                    />
+                                                </InputGroup>
+                                            </Form.Group>
+                                        </Col>
 
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Bidang Perusahaan
-                                            </label>
-                                            <Company />
-                                        </div>
-                                    </div>
+                                        <Col sm={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="bidangPerusahaan">
+                                                    Bidang Perusahaan
+                                            </Form.Label>
+                                                <Company />
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
+
                                     <hr></hr>
 
-                                    <h5 style={{ textAlign: "left", fontSize: "17.5px" }}>
+                                    <h5>
                                         <b>Data Diri Anda</b>
                                     </h5>
 
                                     <Row>
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Nama Lengkap
-                                            </label>
-                                            <div className="input-group mb-3">
-                                                <input
+                                        <Col md={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="namaLengkap">
+                                                    Nama Lengkap
+                                            </Form.Label>
+                                                <Form.Control
                                                     type="text"
-                                                    className="form-control"
-                                                    id="basic-url"
-                                                    aria-describedby="basic-addon3"
-                                                ></input>
-                                            </div>
-                                        </div>
+                                                    label="Nama Lengkap"
+                                                    id="namaLengkap"
+                                                    name="namaLengkap"
+                                                    required
+                                                ></Form.Control>
+                                            </Form.Group>
+                                        </Col>
 
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Nama Panggilan
-                                            </label>
-                                            <div className="input-group mb-3">
-                                                <input
+                                        <Col md={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="namaPanggilan">
+                                                    Nama Panggilan
+                                            </Form.Label>
+                                                <Form.Control
                                                     type="text"
-                                                    className="form-control"
-                                                    id="basic-url"
-                                                    aria-describedby="basic-addon3"
-                                                ></input>
-                                            </div>
-                                        </div>
+                                                    label="Nama Panggilan"
+                                                    id="namaPangilan"
+                                                    name="namaPanggilan"
+                                                    required
+                                                ></Form.Control>
+                                            </Form.Group>
+                                        </Col>
 
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Email
-                                            </label>
-                                            <div className="input-group">
-                                                <input type="text" className="form-control"></input>
-                                            </div>
-                                        </div>
+                                        <Col md={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="userEmail">
+                                                    Email
+                                            </Form.Label>
+                                                <Form.Control
+                                                    type="email"
+                                                    label="Email"
+                                                    id="userEmail"
+                                                    name="userEmail"
+                                                    required
+                                                ></Form.Control>
+                                            </Form.Group>
+                                        </Col>
 
-                                        <div className="col-sm-6">
-                                            <label className="input-label" htmlFor="basic-url">
-                                                Telepon
-                                            </label>
-                                            <div className="input-group mb-3">
-                                                <div className="input-group-prepend">
-                                                    <span className="input-group-text" id="basic-addon1">
-                                                        +
-                                                    </span>
-                                                </div>
-                                                <input
-                                                    type="text"
-                                                    className="form-control"
-                                                    placeholder="62"
-                                                    aria-label="62"
-                                                    aria-describedby="basic-addon1"
-                                                ></input>
-                                            </div>
-                                        </div>
+                                        <Col sm={6}>
+                                            <Form.Group>
+                                                <Form.Label className="input-label" htmlFor="noUser">
+                                                    Telepon
+                                            </Form.Label>
+                                                <InputGroup>
+                                                    <InputGroup.Prepend>
+                                                        <InputGroup.Text id="noUser">
+                                                            +
+                                                    </InputGroup.Text>
+                                                    </InputGroup.Prepend>
+                                                    <Form.Control
+                                                        type="tel"
+                                                        label="Nomor Telepon"
+                                                        placeholder="62"
+                                                        id="noUser"
+                                                        name="noUser"
+                                                    ></Form.Control>
+                                                </InputGroup>
+                                            </Form.Group>
+                                        </Col>
                                     </Row>
 
                                     <ReCAPTCHA
                                         className="text-center"
-                                        sitekey="6LdEU9saAAAAAAWscR0jnmDBSWohEevM21GYi5f4"
+                                        sitekey="6LdRldAaAAAAAKZRCsMMkCz5m40ybek3KY8Pak2t"
                                     />
 
-                                    <button
+                                    <Button
                                         type="button"
                                         className="btn btn-secondary btn-lg btn-block btn-register"
                                     >
                                         Register
-                                    </button>
+                                    </Button>
 
                                     <div className="mt-5">
                                         <a className="text-link" href="https://widyaskilloka.com/login">
