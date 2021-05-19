@@ -1,0 +1,21 @@
+.register-form {
+  border: none;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.register-form .card-body {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+.logo .app-logo {
+  width: 200px;
+  margin-bottom: 40px;
+}
