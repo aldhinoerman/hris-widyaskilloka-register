@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
+import '../../pages/Register.css'
 import axios from 'axios';
 
 class Company extends Component {
@@ -33,7 +34,7 @@ class Company extends Component {
                 <Form.Control as="select" id="bidangPerusahaan">
                     {
                         this.state.data.map(v => {
-                            return <option key={v.id}>
+                            return <option key={v.id} className="company">
                                 {v.name}
                             </option>
                         })

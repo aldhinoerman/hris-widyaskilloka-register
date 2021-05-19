@@ -29,6 +29,19 @@
 label {
   display: inline-block;
   margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+hr {
+    color: #2b3c5e;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+.company {
+    padding: 20px;
 }
 
 .input-group {
@@ -85,4 +98,10 @@ input[type="tel"]::placeholder {
 
 .text-link:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+    .recaptcha {
+        padding: 20px;
+    }
 }
