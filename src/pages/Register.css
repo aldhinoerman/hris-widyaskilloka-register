@@ -96,6 +96,10 @@ input[type="tel"]::placeholder {
   text-decoration: none;
 }
 
+.text-link i {
+    margin-right: 10px;
+}
+
 .text-link:hover {
   text-decoration: underline;
 }

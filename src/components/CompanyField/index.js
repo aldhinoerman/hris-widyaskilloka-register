@@ -31,14 +31,14 @@ class Company extends Component {
     render() {
         return (
             <div>
-                <Form.Control as="select" id="bidangPerusahaan">
-                    {
-                        this.state.data.map(v => {
-                            return <option key={v.id} className="company">
-                                {v.name}
-                            </option>
-                        })
-                    }
+                <Form.Control as="select" id="bidangPerusahaan" placeholder="Select...">
+                        {
+                            this.state.data.map(v => {
+                                return <option key={v.id} className="company">
+                                    {v.name}
+                                </option>
+                            })
+                        }
                 </Form.Control>
             </div >
         )
